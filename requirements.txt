@@ -1,0 +1,9 @@
+flask
+flask_sqlalchemy
+mysql
+mysqlclient
+mysql-connector-python
+pymysql
+mysqlclient
+pyvim
+pycurl
