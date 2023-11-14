@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                script {
-                    myapp = docker.build("webapp-deployment")
+                steps {
+                    sh 'sudo docker build -t webapp-deployment .'
                 }
             }
         }
