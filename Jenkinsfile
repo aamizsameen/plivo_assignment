@@ -8,9 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                steps {
                     sh 'docker build -t webapp-deployment .'
-                }
             }
         }
         stage('Pushing to ECR') {
