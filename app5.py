@@ -67,7 +67,7 @@ def create_message():
 
 
 
-# Endpoint for searching messages based on filters
+# Endpoint for searching messages based on the filters
 @app.route('/search', methods=['GET'])
 def search_messages():
     query_params = request.args
