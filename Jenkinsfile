@@ -23,7 +23,7 @@ pipeline {
         stage('Deploying to Kubernetes') {
           steps {
             
-              sh "sudo kubectl apply -f deploy.yaml"
+              sh "sudo kubectl rollout restart deployment deploy.yaml"
             
           }
         }
