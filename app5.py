@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 # Configure logging
-logging.basicConfig(filename='/var/log/app.log', level=logging.DEBUG)
+#logging.basicConfig(filename='/var/log/app.log', level=logging.DEBUG)
 
 # Configure the MySQL database
 app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql://{os.environ['MYSQL_USER']}:{os.environ['MYSQL_PASSWORD']}@{os.environ['MYSQL_HOST']}:{os.environ['MYSQL_PORT']}/{os.environ['MYSQL_DATABASE']}"
@@ -67,7 +67,7 @@ def create_message():
 
 
 
-# Endpoint for searching messages based on the filters
+# Endpoint for searching messages based on filters
 @app.route('/search', methods=['GET'])
 def search_messages():
     query_params = request.args
